@@ -25,8 +25,8 @@ Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 
 void setup()
 {
-pinMode(3, OUTPUT);
-pinMode(4,OUTPUT);
+pinMode(3, OUTPUT); //bike battery
+pinMode(4,OUTPUT); //bike self motor
 
 
 LockedPosition(true);
@@ -54,7 +54,7 @@ void LockedPosition(int locked)
 {
 if (locked)
 {
-digitalWrite(4, LOW);
+digitalWrite(4, LOW); // password is wrong both is "OFF" state
 digitalWrite(3,LOW);
 
 
@@ -62,10 +62,10 @@ digitalWrite(3,LOW);
 }
 else
 {
- digitalWrite(3,HIGH);
-digitalWrite(4,HIGH);
-delay(2000);
-digitalWrite(4,LOW);
+ digitalWrite(3,HIGH); // "ON" the bike battery (engine)
+digitalWrite(4,HIGH); // "ON" the self motor 
+delay(2000);          // wait for 2 second to start the bike 
+digitalWrite(4,LOW); // "OFF" the self after starting the bikr (after 2 second it will turn off automaticallys)
 
 
 
