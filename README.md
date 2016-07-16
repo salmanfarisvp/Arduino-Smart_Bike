@@ -7,10 +7,14 @@ This project is based on  3*4 matrix keypad and an Arduino , when the correct pi
 Note :-  Pin 4 will "ON" only 2 Second , after 2 second it will turn "OFF" Automatically ;
 
 in here =>
-    R1 - D9    C1 - D12
-    R2 - D8    C2 - D11
-    R3 - D7    C3 - D10
+    R1 - D9   
+    R2 - D8    
+    R3 - D7   
     R4 - D6
+    ----------
+    C1 - D12
+    C2 - D11
+    C3 - D10
     
     // R is the Row and C is the Colum;
     
